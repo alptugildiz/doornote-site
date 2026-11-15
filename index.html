@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Doornote: a checklist that reminds you as you step out</title>
+<meta name="description" content="Mark your home, write a short list. When you’re 100 m away, your phone reminds you to check it. Works with the app closed. No account, no tracking.">
+<meta name="theme-color" content="#efebe3">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Doornote: a checklist that reminds you as you step out">
+<meta property="og:description" content="Mark your home, write a short list. When you’re 100 m away, your phone reminds you to check it. Works with the app closed. No account, no tracking.">
+<meta property="og:locale" content="en_US">
+<link rel="canonical" href="https://alptugildiz.github.io/doornote-site/">
+<link rel="alternate" hreflang="en" href="https://alptugildiz.github.io/doornote-site/">
+<link rel="alternate" hreflang="tr" href="https://alptugildiz.github.io/doornote-site/tr/">
+<link rel="alternate" hreflang="x-default" href="https://alptugildiz.github.io/doornote-site/">
+<meta property="og:url" content="https://alptugildiz.github.io/doornote-site/">
+<meta property="og:image" content="https://alptugildiz.github.io/doornote-site/assets/screens/en-home.webp">
+<link rel="icon" href="favicon.png">
+<link rel="preload" href="assets/fonts/ArchivoNarrow_700Bold.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<script>
+(function () {
+  try {
+    if (localStorage.getItem('doornote-lang')) return;
+    var l = (navigator.languages && navigator.languages[0]) || navigator.language || '';
+    if (/^tr\b/i.test(l) && !document.referrer.startsWith(location.origin)) location.replace('tr/');
+  } catch (e) {}
+})();
+</script>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+<div class="wrap">
+<a class="brand" href="" aria-label="Doornote">
+<img src="assets/logo.svg" alt="" width="40" height="40"><span>Doornote</span>
+</a>
+<nav aria-label="Main">
+<a class="hide-sm" href="#how">How it works</a>
+<a href="privacy/">Privacy</a>
+<a class="lang" href="tr/" hreflang="tr" lang="tr" data-lang="tr" aria-label="Türkçe">TR</a>
+</nav>
+</div>
+</header>
+<main id="main">
+
+<section class="hero">
+<div class="wrap">
+<div class="hero__copy">
+<h1>Reminds you as you <em>step out.</em></h1>
+<p class="lede">Mark your home and write a short list: keys, wallet, stove. When you’re 100 m from home, your phone reminds you, and you tick it off in seconds. Works with the app closed. No account.</p>
+<div class="stores">
+<a class="press press--accent" href="https://apps.apple.com/app/doornote/id0000000000" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 3v12M6.5 9.5 12 15l5.5-5.5M4 20h16"/></svg><span><small>Download on the</small><strong>App Store</strong></span></a>
+<a class="press" href="https://play.google.com/store/apps/details?id=com.alpldz.doornote" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 3v12M6.5 9.5 12 15l5.5-5.5M4 20h16"/></svg><span><small>Get it on</small><strong>Google Play</strong></span></a>
+</div>
+<p class="hero__note">iPhone and Android · Free to use · English and Turkish</p>
+</div>
+<div class="hero__phone">
+<div class="phone"><div class="phone__screen"><img src="assets/screens/en-home.webp" alt="Doornote home screen: “Home · 100 m”, “You’re in.”, and the list Keys, Wallet, Phone and 2 more." width="720" height="1600" fetchpriority="high"></div></div>
+</div>
+</div>
+</section>
+
+<section class="walk" id="how" data-step="0" aria-labelledby="walk-title">
+<div class="walk__stage">
+<div class="wrap walk__grid">
+<div class="walk__copy">
+<h2 id="walk-title">Step out. The list comes to you.</h2>
+<div class="meter" aria-hidden="true">
+<div class="meter__read" data-read>0<span>m</span></div>
+<div class="rail"><div class="rail__fill"></div><div class="rail__door"></div></div>
+<div class="rail__ticks"><span>Door</span><span>50 m</span><span>100 m</span></div>
+</div>
+<ol class="steps" role="list">
+<li class="step" data-n="0"><h3>At home</h3><p>Nothing to do. Doornote stays quiet while you’re in.</p></li>
+<li class="step" data-n="1"><h3>100 m out</h3><p>Your phone notices you left and the reminder arrives, even with the app closed.</p></li>
+<li class="step" data-n="2"><h3>Tick it off</h3><p>Tap the reminder and check each item. Big boxes, one hand.</p></li>
+<li class="step" data-n="3"><h3>Done</h3><p>Stamped with the time, so later you know you checked.</p></li>
+</ol>
+</div>
+<div class="phone">
+<div class="phone__screen">
+<div class="notif" aria-hidden="true">
+<span class="notif__icon"><svg viewBox="160 140 160 165" aria-hidden="true"><g fill="#fbf9f4"><polygon points="277,155 297,155 297,206 277,187"/><polygon points="163,226 163,211 234,145 245,145 311,211 311,226 288,226 288,210.5 239,162.5 186.3,210 186,226"/><rect x="170" y="224" width="16" height="73"/><rect x="288" y="224" width="16" height="73"/><rect x="170" y="281" width="134" height="16"/><polygon points="217.5,225.5 232,240 264.5,210.5 275,221 232,264 205.5,237.5"/></g></svg></span>
+<span class="notif__app">Doornote · now</span>
+<span class="notif__title">You left Home</span>
+<span class="notif__body">Keys, Wallet, Phone and 2 more. Tap to check.</span>
+</div>
+<img data-screen="home" src="assets/screens/en-home.webp" alt="Doornote home screen showing you’re at home." width="720" height="1600" loading="lazy">
+<img data-screen="check" src="assets/screens/en-check.webp" alt="The check screen: Keys, Wallet and Phone ticked, 3 of 5." width="720" height="1600" loading="lazy">
+<img data-screen="done" src="assets/screens/en-done.webp" alt="The done screen: “Done. All 5 items checked.” with a CHECKED stamp and the time." width="720" height="1600" loading="lazy">
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section setup" aria-labelledby="setup-title">
+<div class="wrap">
+<div class="setup__intro">
+<h2 id="setup-title">Set up once. Then forget it.</h2>
+<p class="lede">Setup takes about a minute. After that there is nothing to do day to day.</p>
+</div>
+<div class="card">
+<div class="card__band"><span class="label">Setup</span><span class="label muted">3 steps</span></div>
+<div class="card__line"><span class="mono">01</span><div><h3>Mark your door</h3><p>At home, tap “I’m home now”. That spot becomes your door. Pick 50, 100 or 200 m.</p></div></div>
+<div class="card__line"><span class="mono">02</span><div><h3>Write your list</h3><p>The things you check on the way out. Five items are already there to edit; up to seven are free.</p></div></div>
+<div class="card__line"><span class="mono">03</span><div><h3>Allow two things</h3><p>“Always” location and notifications. The app explains why before it asks.</p></div></div>
+</div>
+</div>
+</section>
+
+<section class="promise" aria-labelledby="promise-title">
+<div class="wrap">
+<h2 id="promise-title">Your location stays on your phone.</h2>
+<div class="promise__list">
+<div class="promise__item"><h3>No account</h3><p>No sign-up, no ads, no analytics, no tracking across apps.</p></div>
+<div class="promise__item"><h3>No server</h3><p>Your phone’s own location system watches the distance. Doornote has no server, so there is nowhere to send your location.</p></div>
+<div class="promise__item"><h3>Said plainly</h3><p>The map you use to place your door is Google Maps on Android and Apple Maps on iPhone, and purchases go through RevenueCat. The policy says exactly what they see.</p></div>
+</div>
+<a class="more" href="privacy/">Read the privacy policy →</a>
+</div>
+</section>
+
+<section class="section plans" aria-labelledby="plans-title">
+<div class="wrap">
+<div><h2 id="plans-title">Free does the job.</h2><p class="lede" style="margin-top:18px">Premium adds more doors. You pay once.</p></div>
+<div class="plans__grid">
+<div class="card plan plan--free">
+<div class="plan__head"><span class="plan__name">Free</span><span class="muted">Everything you need for one home.</span></div>
+<ul><li><svg viewBox="0 0 24 24" fill="none" stroke="#1b2a45" stroke-width="2.6" aria-hidden="true"><path d="m4.5 12.5 5 5 10-11"/></svg><span>1 door</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="#1b2a45" stroke-width="2.6" aria-hidden="true"><path d="m4.5 12.5 5 5 10-11"/></svg><span>A list of up to 7 items</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="#1b2a45" stroke-width="2.6" aria-hidden="true"><path d="m4.5 12.5 5 5 10-11"/></svg><span>Reminder when you step out</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="#1b2a45" stroke-width="2.6" aria-hidden="true"><path d="m4.5 12.5 5 5 10-11"/></svg><span>English and Turkish</span></li></ul>
+</div>
+<div class="card plan plan--premium">
+<div class="plan__head"><span class="plan__name">Premium</span><span class="muted">One-time purchase. No subscription, nothing renews.</span></div>
+<ul><li><svg viewBox="0 0 24 24" fill="none" stroke="#e8501c" stroke-width="2.6" aria-hidden="true"><path d="m4.5 12.5 5 5 10-11"/></svg><span>Home, office, holiday home: as many doors as you like</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="#e8501c" stroke-width="2.6" aria-hidden="true"><path d="m4.5 12.5 5 5 10-11"/></svg><span>A separate list for every door, unlimited items</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="#e8501c" stroke-width="2.6" aria-hidden="true"><path d="m4.5 12.5 5 5 10-11"/></svg><span>Bought on one phone, restore it on the next</span></li></ul>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section faq" aria-labelledby="faq-title">
+<div class="wrap">
+<h2 id="faq-title">Questions</h2>
+<div>
+<details><summary>Does the app need to be open?</summary><p>No. Close it and lock your phone; the reminder still comes. That is why it asks for “Always” location.</p></details>
+<details><summary>Will it drain my battery?</summary><p>Not noticeably. The phone itself watches your location, and Doornote only wakes for a few seconds when you leave.</p></details>
+<details><summary>Which distance should I pick?</summary><p>100 m works best for most homes. 50 m reminds you sooner, but if your phone’s location drifts it can go off while you’re still inside.</p></details>
+<details><summary>My Android phone never reminds me.</summary><p>Some brands put apps to sleep to save battery. Doornote asks once to be left awake and shows the extra setting for phones like Xiaomi and Samsung. Settings › Diagnostics shows what is missing.</p></details>
+<details><summary>Is Premium a subscription?</summary><p>No. It is a single purchase. On a new phone, use Restore purchases in Settings.</p></details>
+<details><summary>Can I try it before I leave?</summary><p>Yes. Settings › Send a test reminder shows the notification exactly as it will arrive.</p></details>
+</div>
+</div>
+</section>
+
+<section class="get" aria-labelledby="get-title">
+<div class="wrap">
+<h2 id="get-title">Next time, you’ll know.</h2>
+<div class="stores">
+<a class="press" href="https://apps.apple.com/app/doornote/id0000000000" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 3v12M6.5 9.5 12 15l5.5-5.5M4 20h16"/></svg><span><small>Download on the</small><strong>App Store</strong></span></a>
+<a class="press" href="https://play.google.com/store/apps/details?id=com.alpldz.doornote" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 3v12M6.5 9.5 12 15l5.5-5.5M4 20h16"/></svg><span><small>Get it on</small><strong>Google Play</strong></span></a>
+</div>
+</div>
+</section>
+
+</main>
+<footer class="foot">
+<div class="wrap">
+<span class="mono muted">© 2026 Doornote</span>
+<nav aria-label="Footer">
+<a href="privacy/">Privacy policy</a>
+
+<a href="tr/" lang="tr" data-lang="tr">Türkçe</a>
+</nav>
+</div>
+</footer>
+<script src="assets/site.js" defer></script>
+</body>
+</html>
