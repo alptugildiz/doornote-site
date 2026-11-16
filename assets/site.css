@@ -619,7 +619,7 @@ main { position: relative; }
   .walk { height: 360vh; }
   .walk__grid { grid-template-columns: 1fr; gap: clamp(28px, 4svh, 44px); justify-items: center; }
   .walk__copy { order: 2; width: 100%; gap: 14px; }
-  .walk .phone { width: auto; height: min(139vw, calc(100svh - var(--top-h) - 320px), 560px); border-radius: 28px; padding: 6px; box-shadow: 6px 6px 0 var(--ink); }
+  .walk .phone { width: auto; height: min(139vw, calc(100svh - var(--top-h) - 320px), 560px); aspect-ratio: 9 / 16.5; border-radius: 28px; padding: 6px; box-shadow: 6px 6px 0 var(--ink); }
   /* The fence just clears the phone; the trail stays on screen. */
   .range { width: calc(min(139vw, calc(100svh - var(--top-h) - 320px), 560px) * 1.12); }
   .fp:is([data-at="124"], [data-at="132"], [data-at="140"], [data-at="148"], [data-at="156"], [data-at="164"], [data-at="172"]) { display: none; }
@@ -632,12 +632,16 @@ main { position: relative; }
   .steps { min-height: 6.4em; }
   .step h3 { font-size: 1.35rem; margin-bottom: 4px; }
   .step p { font-size: 1rem; }
-  .walk .notif { left: 4px; right: 4px; top: 16px; padding: 7px 8px 8px; gap: 2px 7px; grid-template-columns: 20px 1fr; border-radius: 12px; }
-  .walk .notif__icon { width: 20px; height: 20px; }
-  .walk .notif__icon svg { width: 12px; height: 12px; }
-  .walk .notif__title { font-size: 0.7rem; }
-  .walk .notif__app { font-size: 0.56rem; }
-  .walk .notif__body { font-size: 0.6rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  /* The phone is small here, so the notification steps out of it, into the circle, at a readable size. */
+  /* The phone is small here, so the notification steps out of it, into the circle, at a readable size. */
+  .walk .phone__screen { overflow: visible; }
+  .walk .phone__screen img { border-radius: inherit; }
+  .walk .notif { --nw: min(300px, calc(100vw - 2 * var(--gutter) - 16px)); left: 50%; right: auto; width: var(--nw); margin-left: calc(var(--nw) / -2); top: 13%; padding: 11px 12px 12px; gap: 3px 10px; grid-template-columns: 30px 1fr; border-radius: 16px; border: 2px solid var(--ink); box-shadow: 5px 5px 0 var(--ink); }
+  .walk .notif__icon { width: 30px; height: 30px; }
+  .walk .notif__icon svg { width: 17px; height: 17px; }
+  .walk .notif__title { font-size: 0.9rem; }
+  .walk .notif__app { font-size: 0.7rem; }
+  .walk .notif__body { font-size: 0.8rem; }
   .notif__app { font-size: 0.66rem; }
 }
 @media (max-width: 520px) {
