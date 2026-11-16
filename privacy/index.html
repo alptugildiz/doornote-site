@@ -22,18 +22,27 @@
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<header class="top">
+<header class="bar" data-bar>
 <div class="wrap">
-<a class="brand" href="../" aria-label="Doornote">
-<img src="../assets/logo.svg" alt="" width="40" height="40"><span>Doornote</span>
-</a>
-<nav aria-label="Main">
+<a class="brand" href="../" aria-label="Doornote"><img src="../assets/logo.svg" alt="" width="32" height="32"><span>Doornote</span></a>
 
-<a href="../privacy/">Privacy</a>
+<nav class="bar__nav" aria-label="Main"><a class="bar__link" href="../#how" data-nav="how">How it works</a><a class="bar__link" href="../#plans" data-nav="plans">Plans</a><a class="bar__link" href="../#faq" data-nav="faq">Questions</a><a class="bar__link" href="../privacy/" data-nav="privacy" aria-current="page">Privacy</a></nav>
 <a class="lang" href="../tr/gizlilik/" hreflang="tr" lang="tr" data-lang="tr" aria-label="Türkçe">TR</a>
-</nav>
+<a class="press press--accent press--sm" href="../#get"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 3v12M6.5 9.5 12 15l5.5-5.5M4 20h16"/></svg><strong class="bar__get-long">Get the app</strong><strong class="bar__get-short">Get</strong></a>
+<button class="menu-btn" type="button" data-menu-open aria-controls="menu" aria-expanded="false" aria-label="Menu"><span></span></button>
 </div>
 </header>
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu" inert>
+<div class="menu__head"><a class="brand" href="../" aria-label="Doornote"><img src="../assets/logo.svg" alt="" width="40" height="40"><span>Doornote</span></a><button class="menu-btn menu-btn--x" type="button" data-menu-close aria-label="Close"><span></span></button></div>
+<nav class="menu__links" aria-label="Main">
+<a href="../#how" style="--i:0"><span>01</span>How it works</a><a href="../#plans" style="--i:1"><span>02</span>Plans</a><a href="../#faq" style="--i:2"><span>03</span>Questions</a><a href="../privacy/" style="--i:3"><span>04</span>Privacy</a>
+<a href="../tr/gizlilik/" hreflang="tr" lang="tr" data-lang="tr" style="--i:4"><span>TR</span>Türkçe</a>
+</nav>
+<div class="stores">
+<a class="press press--accent" href="https://apps.apple.com/app/doornote/id0000000000" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 3v12M6.5 9.5 12 15l5.5-5.5M4 20h16"/></svg><span><small>Download on the</small><strong>App Store</strong></span></a>
+<a class="press" href="https://play.google.com/store/apps/details?id=com.alpldz.doornote" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 3v12M6.5 9.5 12 15l5.5-5.5M4 20h16"/></svg><span><small>Get it on</small><strong>Google Play</strong></span></a>
+</div>
+</div>
 <main id="main" class="doc">
 <div class="wrap">
 <nav class="doc__toc" aria-label="Privacy policy">
@@ -98,14 +107,15 @@
 </div>
 </main>
 <footer class="foot">
-<div class="wrap">
-<span class="mono muted">© 2026 Doornote</span>
-<nav aria-label="Footer">
-<a href="../privacy/">Privacy policy</a>
-
-<a href="../tr/" lang="tr" data-lang="tr">Türkçe</a>
-</nav>
+<div class="wrap foot__top">
+<div class="foot__bye"><span class="foot__door" aria-hidden="true"><svg viewBox="160 140 160 165" aria-hidden="true"><g fill="#fbf9f4"><polygon points="277,155 297,155 297,206 277,187"/><polygon points="163,226 163,211 234,145 245,145 311,211 311,226 288,226 288,210.5 239,162.5 186.3,210 186,226"/><rect x="170" y="224" width="16" height="73"/><rect x="288" y="224" width="16" height="73"/><rect x="170" y="281" width="134" height="16"/><polygon points="217.5,225.5 232,240 264.5,210.5 275,221 232,264 205.5,237.5"/></g></svg></span><p class="foot__line">See you at the door.</p></div>
+<div class="foot__cols">
+<div><p class="label">App</p><a href="../#how">How it works</a><a href="../#plans">Plans</a><a href="../#faq">Questions</a></div>
+<div><p class="label">Legal</p><a href="../privacy/">Privacy policy</a></div>
+<div><p class="label">Language</p><a href="../privacy/" hreflang="en" lang="en" data-lang="en" aria-current="true">English</a><a href="../tr/gizlilik/" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a></div>
 </div>
+</div>
+<div class="wrap foot__base"><span class="mono">© 2026 Doornote · Your location stays on your phone.</span></div>
 </footer>
 <script src="../assets/site.js" defer></script>
 </body>

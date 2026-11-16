@@ -23,24 +23,33 @@
 <body>
 
 <a class="skip" href="#main">İçeriğe geç</a>
-<header class="top">
+<header class="bar" data-bar>
 <div class="wrap">
-<a class="brand" href="../tr/" aria-label="Doornote">
-<img src="../assets/logo.svg" alt="" width="40" height="40"><span>Doornote</span>
-</a>
-<nav aria-label="Ana menü">
-<a class="hide-sm" href="#how">Nasıl çalışır</a>
-<a href="../tr/gizlilik/">Gizlilik</a>
+<a class="brand" href="../tr/" aria-label="Doornote"><img src="../assets/logo.svg" alt="" width="32" height="32"><span>Doornote</span></a>
+<span class="bar__m" title="Sayfada ne kadar ilerledin"><b data-pedo>0</b> m</span>
+<nav class="bar__nav" aria-label="Ana menü"><a class="bar__link" href="#how" data-nav="how">Nasıl çalışır</a><a class="bar__link" href="#plans" data-nav="plans">Planlar</a><a class="bar__link" href="#faq" data-nav="faq">Sorular</a><a class="bar__link" href="../tr/gizlilik/" data-nav="privacy">Gizlilik</a></nav>
 <a class="lang" href="../" hreflang="en" lang="en" data-lang="en" aria-label="English">EN</a>
-</nav>
+<a class="press press--accent press--sm" href="#get"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 3v12M6.5 9.5 12 15l5.5-5.5M4 20h16"/></svg><strong class="bar__get-long">Uygulamayı indir</strong><strong class="bar__get-short">İndir</strong></a>
+<button class="menu-btn" type="button" data-menu-open aria-controls="menu" aria-expanded="false" aria-label="Menü"><span></span></button>
 </div>
 </header>
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menü" inert>
+<div class="menu__head"><a class="brand" href="../tr/" aria-label="Doornote"><img src="../assets/logo.svg" alt="" width="40" height="40"><span>Doornote</span></a><button class="menu-btn menu-btn--x" type="button" data-menu-close aria-label="Kapat"><span></span></button></div>
+<nav class="menu__links" aria-label="Ana menü">
+<a href="#how" style="--i:0"><span>01</span>Nasıl çalışır</a><a href="#plans" style="--i:1"><span>02</span>Planlar</a><a href="#faq" style="--i:2"><span>03</span>Sorular</a><a href="../tr/gizlilik/" style="--i:3"><span>04</span>Gizlilik</a>
+<a href="../" hreflang="en" lang="en" data-lang="en" style="--i:4"><span>EN</span>English</a>
+</nav>
+<div class="stores">
+<a class="press press--accent" href="https://apps.apple.com/app/doornote/id0000000000" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 3v12M6.5 9.5 12 15l5.5-5.5M4 20h16"/></svg><span><small>App Store’dan</small><strong>İndir</strong></span></a>
+<a class="press" href="https://play.google.com/store/apps/details?id=com.alpldz.doornote" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 3v12M6.5 9.5 12 15l5.5-5.5M4 20h16"/></svg><span><small>Google Play’den</small><strong>Edinin</strong></span></a>
+</div>
+</div>
 <main id="main">
 
 <section class="hero">
-<div class="wrap">
-<div class="hero__copy">
-<h1>Kapıdan çıkınca <em>hatırlatır.</em></h1>
+<div class="hero__map" aria-hidden="true"><div></div></div>
+<div class="wrap hero__copy">
+<h1><span class="w"><span style="--i:0">Kapıdan</span></span> <span class="w"><span style="--i:1">çıkınca</span></span> <em><span class="w"><span style="--i:2">hatırlatır.</span></span></em></h1>
 <p class="lede">Evini işaretle, kısa bir liste yaz: anahtar, cüzdan, ocak. Evden 100 metre uzaklaşınca telefonun hatırlatır, sen de saniyeler içinde işaretlersin. Uygulama kapalıyken de çalışır. Hesap gerekmez.</p>
 <div class="stores">
 <a class="press press--accent" href="https://apps.apple.com/app/doornote/id0000000000" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 3v12M6.5 9.5 12 15l5.5-5.5M4 20h16"/></svg><span><small>App Store’dan</small><strong>İndir</strong></span></a>
@@ -48,14 +57,34 @@
 </div>
 <p class="hero__note">iPhone ve Android · Ücretsiz kullanılır · Türkçe ve İngilizce</p>
 </div>
-<div class="hero__phone">
-<div class="phone"><div class="phone__screen"><img src="../assets/screens/tr-home.webp" alt="Doornote ana ekranı: “Ev · 100 m”, “Evdesin.” ve Anahtar, Cüzdan, Telefon ve 2 madde daha." width="720" height="1600" fetchpriority="high"></div></div>
+<div class="hero__stage">
+<div class="hero__device">
+<svg class="scene" viewBox="-700 -700 1400 1400" aria-hidden="true" focusable="false">
+<circle class="scene__pulse" r="520"/><circle class="scene__pulse" r="520"/><circle class="scene__pulse" r="520"/>
+<circle class="scene__fence" r="520" pathLength="100"/>
+<text class="scene__label" x="-512" y="-150">100 M</text>
+<path class="scene__route" data-route d="M150 -150 H300 V-260 H720"/>
+<path class="scene__walked" d="M150 -150 H300 V-260 H720"/>
+<circle class="scene__burst" r="70"/>
+<g class="scene__walker"><circle r="13"/><g class="scene__tag"><rect x="22" y="-17" width="78" height="34"/><text x="61" y="6" data-metres>0 m</text></g></g>
+</svg>
+<div class="phone"><div class="phone__screen">
+<div class="notif" aria-hidden="true">
+<span class="notif__icon"><svg viewBox="160 140 160 165" aria-hidden="true"><g fill="#fbf9f4"><polygon points="277,155 297,155 297,206 277,187"/><polygon points="163,226 163,211 234,145 245,145 311,211 311,226 288,226 288,210.5 239,162.5 186.3,210 186,226"/><rect x="170" y="224" width="16" height="73"/><rect x="288" y="224" width="16" height="73"/><rect x="170" y="281" width="134" height="16"/><polygon points="217.5,225.5 232,240 264.5,210.5 275,221 232,264 205.5,237.5"/></g></svg></span>
+<span class="notif__app">Doornote · şimdi</span>
+<span class="notif__title">Ev kapısından çıktın</span>
+<span class="notif__body">Anahtar, Cüzdan, Telefon ve 2 madde daha. Kontrol etmek için dokun.</span>
+</div>
+<img src="../assets/screens/tr-home.webp" alt="Doornote ana ekranı: “Ev · 100 m”, “Evdesin.” ve Anahtar, Cüzdan, Telefon ve 2 madde daha." width="720" height="1600" fetchpriority="high">
+</div></div>
 </div>
 </div>
+<div class="ticker" aria-hidden="true"><div class="ticker__track"><span><span>Anahtar</span><span>Cüzdan</span><span>Telefon</span><span>Ocak kapalı</span><span>Pencereler</span><span>Şarj aleti</span><span>Ütü kapalı</span><span>Kedinin maması</span><span>Işıklar</span><span>Kapı kilitli</span></span><span><span>Anahtar</span><span>Cüzdan</span><span>Telefon</span><span>Ocak kapalı</span><span>Pencereler</span><span>Şarj aleti</span><span>Ütü kapalı</span><span>Kedinin maması</span><span>Işıklar</span><span>Kapı kilitli</span></span></div></div>
 </section>
 
 <section class="walk" id="how" data-step="0" aria-labelledby="walk-title">
 <div class="walk__stage">
+<div class="walk__paper" aria-hidden="true"></div>
 <div class="wrap walk__grid">
 <div class="walk__copy">
 <h2 id="walk-title">Kapıdan çık. Liste sana gelsin.</h2>
@@ -71,6 +100,15 @@
 <li class="step" data-n="3"><h3>Tamam</h3><p>Saatiyle damgalanır; sonradan kontrol ettiğini bilirsin.</p></li>
 </ol>
 </div>
+<div class="walk__device">
+<svg class="range" viewBox="-500 -500 1000 1000" aria-hidden="true" focusable="false">
+<circle class="range__ring" r="115"/><circle class="range__ring" r="230"/><circle class="range__ring" r="345"/>
+<circle class="range__disc" r="460"/>
+<circle class="range__fence" r="460" pathLength="100"/>
+<text class="range__tick range__tick--fence" x="0" y="-472">100 m</text>
+<circle class="range__burst" r="460"/>
+<g class="steps-trail"><g class="fp" data-at="4" transform="translate(-233.6 -240.2) rotate(-54.6) scale(-1 1)"><path d="M-6 -16c4-5 11-3 11 4 0 6-2 11-4 15-2 3-7 3-8-1-2-5-3-13 1-18z"/><ellipse cx="0" cy="13" rx="5" ry="6"/></g><g class="fp" data-at="35" transform="translate(-238.5 -290.9) rotate(-42.6) scale(1 1)"><path d="M-6 -16c4-5 11-3 11 4 0 6-2 11-4 15-2 3-7 3-8-1-2-5-3-13 1-18z"/><ellipse cx="0" cy="13" rx="5" ry="6"/></g><g class="fp" data-at="65" transform="translate(-278.2 -302.2) rotate(-54.6) scale(-1 1)"><path d="M-6 -16c4-5 11-3 11 4 0 6-2 11-4 15-2 3-7 3-8-1-2-5-3-13 1-18z"/><ellipse cx="0" cy="13" rx="5" ry="6"/></g><g class="fp" data-at="96" transform="translate(-284.3 -351.5) rotate(-42.6) scale(1 1)"><path d="M-6 -16c4-5 11-3 11 4 0 6-2 11-4 15-2 3-7 3-8-1-2-5-3-13 1-18z"/><ellipse cx="0" cy="13" rx="5" ry="6"/></g><g class="fp fp--out" data-at="108" transform="translate(-325.8 -360.7) rotate(-54.6) scale(-1 1)"><path d="M-6 -16c4-5 11-3 11 4 0 6-2 11-4 15-2 3-7 3-8-1-2-5-3-13 1-18z"/><ellipse cx="0" cy="13" rx="5" ry="6"/></g><g class="fp fp--out" data-at="116" transform="translate(-334.3 -407.3) rotate(-42.6) scale(1 1)"><path d="M-6 -16c4-5 11-3 11 4 0 6-2 11-4 15-2 3-7 3-8-1-2-5-3-13 1-18z"/><ellipse cx="0" cy="13" rx="5" ry="6"/></g><g class="fp fp--out" data-at="124" transform="translate(-378.6 -413.3) rotate(-54.6) scale(-1 1)"><path d="M-6 -16c4-5 11-3 11 4 0 6-2 11-4 15-2 3-7 3-8-1-2-5-3-13 1-18z"/><ellipse cx="0" cy="13" rx="5" ry="6"/></g><g class="fp fp--out" data-at="132" transform="translate(-390.1 -456.5) rotate(-42.6) scale(1 1)"><path d="M-6 -16c4-5 11-3 11 4 0 6-2 11-4 15-2 3-7 3-8-1-2-5-3-13 1-18z"/><ellipse cx="0" cy="13" rx="5" ry="6"/></g><g class="fp fp--out" data-at="140" transform="translate(-437.5 -459.0) rotate(-54.6) scale(-1 1)"><path d="M-6 -16c4-5 11-3 11 4 0 6-2 11-4 15-2 3-7 3-8-1-2-5-3-13 1-18z"/><ellipse cx="0" cy="13" rx="5" ry="6"/></g><g class="fp fp--out" data-at="148" transform="translate(-451.8 -499.0) rotate(-42.6) scale(1 1)"><path d="M-6 -16c4-5 11-3 11 4 0 6-2 11-4 15-2 3-7 3-8-1-2-5-3-13 1-18z"/><ellipse cx="0" cy="13" rx="5" ry="6"/></g><g class="fp fp--out" data-at="156" transform="translate(-501.5 -498.8) rotate(-54.6) scale(-1 1)"><path d="M-6 -16c4-5 11-3 11 4 0 6-2 11-4 15-2 3-7 3-8-1-2-5-3-13 1-18z"/><ellipse cx="0" cy="13" rx="5" ry="6"/></g><g class="fp fp--out" data-at="164" transform="translate(-517.7 -536.8) rotate(-42.6) scale(1 1)"><path d="M-6 -16c4-5 11-3 11 4 0 6-2 11-4 15-2 3-7 3-8-1-2-5-3-13 1-18z"/><ellipse cx="0" cy="13" rx="5" ry="6"/></g><g class="fp fp--out" data-at="172" transform="translate(-568.6 -535.2) rotate(-54.6) scale(-1 1)"><path d="M-6 -16c4-5 11-3 11 4 0 6-2 11-4 15-2 3-7 3-8-1-2-5-3-13 1-18z"/><ellipse cx="0" cy="13" rx="5" ry="6"/></g></g>
+</svg>
 <div class="phone">
 <div class="phone__screen">
 <div class="notif" aria-hidden="true">
@@ -86,66 +124,101 @@
 </div>
 </div>
 </div>
+</div>
 </section>
 
+<div class="route" aria-hidden="true"><div class="route__base"></div><div class="route__fill"></div><span class="route__head"></span></div>
+
 <section class="section setup" aria-labelledby="setup-title">
+<span class="stop" data-stop aria-hidden="true"><i></i><b>Kurulum</b></span>
 <div class="wrap">
-<div class="setup__intro">
+<div class="setup__head" data-reveal>
 <h2 id="setup-title">Bir kez kur. Sonra unut.</h2>
 <p class="lede">Kurulum bir dakika kadar sürer. Sonrasında her gün yapman gereken bir şey yok.</p>
 </div>
-<div class="card">
-<div class="card__band"><span class="label">Kurulum</span><span class="label muted">3 adım</span></div>
-<div class="card__line"><span class="mono">01</span><div><h3>Kapını işaretle</h3><p>Evdeyken “Şu an evdeyim”e bas. Orası kapın olur. 50, 100 ya da 200 metre seç.</p></div></div>
-<div class="card__line"><span class="mono">02</span><div><h3>Listeni yaz</h3><p>Çıkarken kontrol ettiklerin. Düzenlemen için beş madde hazır; ücretsiz sürümde yedi maddeye kadar.</p></div></div>
-<div class="card__line"><span class="mono">03</span><div><h3>İki izin ver</h3><p>“Her zaman” konum ve bildirim. Uygulama sormadan önce nedenini anlatır.</p></div></div>
-</div>
+<ol class="setup__steps" role="list">
+<li class="sstep" data-reveal style="--i:0">
+<div class="art art--door" aria-hidden="true"><div class="art__map"></div><div class="art__fence"></div><span class="art__pin"><svg viewBox="160 140 160 165" aria-hidden="true"><g fill="#fbf9f4"><polygon points="277,155 297,155 297,206 277,187"/><polygon points="163,226 163,211 234,145 245,145 311,211 311,226 288,226 288,210.5 239,162.5 186.3,210 186,226"/><rect x="170" y="224" width="16" height="73"/><rect x="288" y="224" width="16" height="73"/><rect x="170" y="281" width="134" height="16"/><polygon points="217.5,225.5 232,240 264.5,210.5 275,221 232,264 205.5,237.5"/></g></svg></span><div class="art__chips"><span>50 m</span><span>100 m</span><span>200 m</span></div></div>
+<div class="sstep__text"><span class="sstep__n">01 / 03</span><h3>Kapını işaretle</h3><p>Evdeyken “Şu an evdeyim”e bas. Orası kapın olur. 50, 100 ya da 200 metre seç.</p></div>
+</li>
+<li class="sstep" data-reveal style="--i:1">
+<div class="art art--list" aria-hidden="true"><ul class="mini"><li style="--k:0"><i></i>Anahtar</li><li style="--k:1"><i></i>Cüzdan</li><li style="--k:2"><i></i>Telefon</li><li style="--k:3"><i></i>Ocak kapalı</li><li style="--k:4"><i></i>Pencereler</li><li class="mini__add">+ Madde ekle</li></ul></div>
+<div class="sstep__text"><span class="sstep__n">02 / 03</span><h3>Listeni yaz</h3><p>Çıkarken kontrol ettiklerin. Düzenlemen için beş madde hazır; ücretsiz sürümde yedi maddeye kadar.</p></div>
+</li>
+<li class="sstep" data-reveal style="--i:2">
+<div class="art art--perms" aria-hidden="true"><div class="perms"><div class="perm" style="--k:0"><span><b>Konum</b><small>Her zaman</small></span><i></i></div><div class="perm" style="--k:1"><span><b>Bildirimler</b><small>İzin verildi</small></span><i></i></div><p>Bir kez sorulur, önce anlatılır</p></div></div>
+<div class="sstep__text"><span class="sstep__n">03 / 03</span><h3>İki izin ver</h3><p>“Her zaman” konum ve bildirim. Uygulama sormadan önce nedenini anlatır.</p></div>
+</li>
+</ol>
 </div>
 </section>
 
 <section class="promise" aria-labelledby="promise-title">
+<span class="stop" data-stop aria-hidden="true"><i></i><b>Gizli</b></span>
 <div class="wrap">
+<div class="promise__art"><svg class="promise__phone" viewBox="0 0 400 800" aria-hidden="true" focusable="false">
+<defs><clipPath id="screen"><rect x="40" y="40" width="320" height="720" rx="38"/></clipPath></defs>
+<rect class="pp__body" x="18" y="18" width="364" height="764" rx="58"/>
+<rect class="pp__screen" x="40" y="40" width="320" height="720" rx="38"/>
+<rect class="pp__speaker" x="170" y="56" width="60" height="6" rx="3"/>
+<g clip-path="url(#screen)">
+<circle class="pp__wave" cx="200" cy="400" r="400"/><circle class="pp__wave" cx="200" cy="400" r="400"/><circle class="pp__wave" cx="200" cy="400" r="400"/>
+</g>
+<g class="pp__flash"><rect class="pp__hit" x="40" y="40" width="320" height="720" rx="38"/>
+<g class="pp__block"><path d="M-6 392l16 16M10 392l-16 16"/><path d="M390 392l16 16M406 392l-16 16"/><path d="M192 -10l16 16M208 -10l-16 16"/><path d="M192 794l16 16M208 794l-16 16"/></g></g>
+<circle class="pp__ring" cx="200" cy="400" r="20"/>
+<circle class="pp__dot" cx="200" cy="400" r="9"/>
+<text class="pp__label" x="200" y="736">CİHAZDA</text>
+</svg></div>
+<div class="promise__body">
 <h2 id="promise-title">Konumun telefonunda kalır.</h2>
 <div class="promise__list">
-<div class="promise__item"><h3>Hesap yok</h3><p>Üyelik yok, reklam yok, analiz aracı yok, uygulamalar arası takip yok.</p></div>
-<div class="promise__item"><h3>Sunucu yok</h3><p>Mesafeyi telefonunun kendi konum sistemi izler. Doornote’un sunucusu yok; konumunu gönderecek bir yer de yok.</p></div>
-<div class="promise__item"><h3>Açık açık</h3><p>Kapını yerleştirdiğin harita Android’de Google Haritalar, iPhone’da Apple Haritalar; satın alma RevenueCat üzerinden yapılır. Neyi gördüklerini gizlilik politikası tek tek yazar.</p></div>
+<div class="promise__item" data-reveal style="--i:0"><h3>Hesap yok</h3><p>Üyelik yok, reklam yok, analiz aracı yok, uygulamalar arası takip yok.</p></div>
+<div class="promise__item" data-reveal style="--i:1"><h3>Sunucu yok</h3><p>Mesafeyi telefonunun kendi konum sistemi izler. Doornote’un sunucusu yok; konumunu gönderecek bir yer de yok.</p></div>
+<div class="promise__item" data-reveal style="--i:2"><h3>Açık açık</h3><p>Kapını yerleştirdiğin harita Android’de Google Haritalar, iPhone’da Apple Haritalar; satın alma RevenueCat üzerinden yapılır. Neyi gördüklerini gizlilik politikası tek tek yazar.</p></div>
 </div>
 <a class="more" href="../tr/gizlilik/">Gizlilik politikasını oku →</a>
 </div>
+</div>
 </section>
 
-<section class="section plans" aria-labelledby="plans-title">
+<section class="section plans" id="plans" aria-labelledby="plans-title">
+<span class="stop" data-stop aria-hidden="true"><i></i><b>Planlar</b></span>
 <div class="wrap">
-<div><h2 id="plans-title">Ücretsiz sürüm işini görür.</h2><p class="lede" style="margin-top:18px">Premium daha fazla kapı ekler. Bir kez ödersin.</p></div>
+<div class="plans__head" data-reveal><h2 id="plans-title">Ücretsiz sürüm işini görür.</h2><p class="lede">Premium daha fazla kapı ekler. Bir kez ödersin.</p></div>
 <div class="plans__grid">
-<div class="card plan plan--free">
+<div class="card plan plan--free" data-reveal style="--i:0">
+<div class="plan__art plan__art--free" aria-hidden="true"><span class="ppin" style="left:50%;top:56%;--d:0s"><b><svg viewBox="160 140 160 165" aria-hidden="true"><g fill="#fbf9f4"><polygon points="277,155 297,155 297,206 277,187"/><polygon points="163,226 163,211 234,145 245,145 311,211 311,226 288,226 288,210.5 239,162.5 186.3,210 186,226"/><rect x="170" y="224" width="16" height="73"/><rect x="288" y="224" width="16" height="73"/><rect x="170" y="281" width="134" height="16"/><polygon points="217.5,225.5 232,240 264.5,210.5 275,221 232,264 205.5,237.5"/></g></svg></b><em>Ev</em></span></div>
 <div class="plan__head"><span class="plan__name">Ücretsiz</span><span class="muted">Bir ev için gereken her şey.</span></div>
 <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="#1b2a45" stroke-width="2.6" aria-hidden="true"><path d="m4.5 12.5 5 5 10-11"/></svg><span>1 kapı</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="#1b2a45" stroke-width="2.6" aria-hidden="true"><path d="m4.5 12.5 5 5 10-11"/></svg><span>En fazla 7 maddelik liste</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="#1b2a45" stroke-width="2.6" aria-hidden="true"><path d="m4.5 12.5 5 5 10-11"/></svg><span>Kapıdan çıkınca hatırlatma</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="#1b2a45" stroke-width="2.6" aria-hidden="true"><path d="m4.5 12.5 5 5 10-11"/></svg><span>Türkçe ve İngilizce</span></li></ul>
 </div>
-<div class="card plan plan--premium">
+<div class="card plan plan--premium" data-reveal style="--i:1"><span class="stamp" aria-hidden="true">Tek seferlik</span>
+<div class="plan__art plan__art--premium" aria-hidden="true"><span class="ppin" style="left:22%;top:60%;--d:0s"><b><svg viewBox="160 140 160 165" aria-hidden="true"><g fill="#fbf9f4"><polygon points="277,155 297,155 297,206 277,187"/><polygon points="163,226 163,211 234,145 245,145 311,211 311,226 288,226 288,210.5 239,162.5 186.3,210 186,226"/><rect x="170" y="224" width="16" height="73"/><rect x="288" y="224" width="16" height="73"/><rect x="170" y="281" width="134" height="16"/><polygon points="217.5,225.5 232,240 264.5,210.5 275,221 232,264 205.5,237.5"/></g></svg></b><em>Ev</em></span><span class="ppin" style="left:52%;top:36%;--d:0.8s"><b><svg viewBox="160 140 160 165" aria-hidden="true"><g fill="#fbf9f4"><polygon points="277,155 297,155 297,206 277,187"/><polygon points="163,226 163,211 234,145 245,145 311,211 311,226 288,226 288,210.5 239,162.5 186.3,210 186,226"/><rect x="170" y="224" width="16" height="73"/><rect x="288" y="224" width="16" height="73"/><rect x="170" y="281" width="134" height="16"/><polygon points="217.5,225.5 232,240 264.5,210.5 275,221 232,264 205.5,237.5"/></g></svg></b><em>Ofis</em></span><span class="ppin" style="left:80%;top:62%;--d:1.6s"><b><svg viewBox="160 140 160 165" aria-hidden="true"><g fill="#fbf9f4"><polygon points="277,155 297,155 297,206 277,187"/><polygon points="163,226 163,211 234,145 245,145 311,211 311,226 288,226 288,210.5 239,162.5 186.3,210 186,226"/><rect x="170" y="224" width="16" height="73"/><rect x="288" y="224" width="16" height="73"/><rect x="170" y="281" width="134" height="16"/><polygon points="217.5,225.5 232,240 264.5,210.5 275,221 232,264 205.5,237.5"/></g></svg></b><em>Yazlık</em></span></div>
 <div class="plan__head"><span class="plan__name">Premium</span><span class="muted">Tek seferlik satın alma. Abonelik yok, hiçbir şey yenilenmez.</span></div>
-<ul><li><svg viewBox="0 0 24 24" fill="none" stroke="#e8501c" stroke-width="2.6" aria-hidden="true"><path d="m4.5 12.5 5 5 10-11"/></svg><span>Ev, ofis, yazlık: istediğin kadar kapı</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="#e8501c" stroke-width="2.6" aria-hidden="true"><path d="m4.5 12.5 5 5 10-11"/></svg><span>Her kapıya ayrı liste, sınırsız madde</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="#e8501c" stroke-width="2.6" aria-hidden="true"><path d="m4.5 12.5 5 5 10-11"/></svg><span>Bir telefonda al, yenisinde geri yükle</span></li></ul>
+<ul><li><svg viewBox="0 0 24 24" fill="none" stroke="#e8501c" stroke-width="2.6" aria-hidden="true"><path d="m4.5 12.5 5 5 10-11"/></svg><span>Ev, ofis, yazlık: istediğin kadar kapı</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="#e8501c" stroke-width="2.6" aria-hidden="true"><path d="m4.5 12.5 5 5 10-11"/></svg><span>Her kapıya ayrı liste, sınırsız madde</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="#e8501c" stroke-width="2.6" aria-hidden="true"><path d="m4.5 12.5 5 5 10-11"/></svg><span>Yeni telefonda aynı Apple ya da Google hesabıyla geri yükle</span></li></ul>
 </div>
 </div>
 </div>
 </section>
 
-<section class="section faq" aria-labelledby="faq-title">
+<section class="section faq" id="faq" aria-labelledby="faq-title">
+<span class="stop" data-stop aria-hidden="true"><i></i><b>Sorular</b></span>
 <div class="wrap">
-<h2 id="faq-title">Sorular</h2>
-<div>
-<details><summary>Uygulamanın açık olması gerekir mi?</summary><p>Hayır. Kapat, telefonu kilitle; hatırlatma yine gelir. “Her zaman” konum izni bunun için istenir.</p></details>
-<details><summary>Pilimi bitirir mi?</summary><p>Fark edilir şekilde etkilemez. Konumu telefonun kendisi izler, Doornote yalnızca çıkışta birkaç saniye uyanır.</p></details>
-<details><summary>Hangi mesafeyi seçmeliyim?</summary><p>100 m çoğu ev için en isabetlisi. 50 m daha erken uyarır ama telefonun konumu sapınca evin içindeyken de tetiklenebilir.</p></details>
-<details><summary>Android telefonum hiç hatırlatmıyor.</summary><p>Bazı markalar pil için uygulamaları uyutur. Doornote bir kez uyutulmamayı ister; Xiaomi, Samsung gibi telefonlarda gereken ek ayarı gösterir. Ayarlar › Tanı raporu neyin eksik olduğunu söyler.</p></details>
-<details><summary>Premium abonelik mi?</summary><p>Hayır, tek seferlik bir satın alma. Yeni telefonda Ayarlar’daki “Satın alımları geri yükle” yeterli.</p></details>
-<details><summary>Çıkmadan deneyebilir miyim?</summary><p>Evet. Ayarlar › “Evden çıkmış gibi yap” bildirimi tam geleceği gibi gösterir.</p></details>
+<div class="faq__head" data-reveal><h2 id="faq-title">Sorular</h2></div>
+<div class="faq__list">
+<details class="qa" data-reveal style="--i:0"><summary><span class="qa__n">01</span><span class="qa__q">Uygulamanın açık olması gerekir mi?</span><span class="qa__x" aria-hidden="true"></span></summary><div class="qa__a"><p>Hayır. Kapat, telefonu kilitle; hatırlatma yine gelir. “Her zaman” konum izni bunun için istenir.</p></div></details>
+<details class="qa" data-reveal style="--i:1"><summary><span class="qa__n">02</span><span class="qa__q">Pilimi bitirir mi?</span><span class="qa__x" aria-hidden="true"></span></summary><div class="qa__a"><p>Fark edilir şekilde etkilemez. Konumu telefonun kendisi izler, Doornote yalnızca çıkışta birkaç saniye uyanır.</p></div></details>
+<details class="qa" data-reveal style="--i:2"><summary><span class="qa__n">03</span><span class="qa__q">Hangi mesafeyi seçmeliyim?</span><span class="qa__x" aria-hidden="true"></span></summary><div class="qa__a"><p>100 m çoğu ev için en isabetlisi. 50 m daha erken uyarır ama telefonun konumu sapınca evin içindeyken de tetiklenebilir.</p></div></details>
+<details class="qa" data-reveal style="--i:3"><summary><span class="qa__n">04</span><span class="qa__q">Android telefonum hiç hatırlatmıyor.</span><span class="qa__x" aria-hidden="true"></span></summary><div class="qa__a"><p>Bazı markalar pil için uygulamaları uyutur. Doornote bir kez uyutulmamayı ister; Xiaomi, Samsung gibi telefonlarda gereken ek ayarı gösterir. Ayarlar › Tanı raporu neyin eksik olduğunu söyler.</p></div></details>
+<details class="qa" data-reveal style="--i:4"><summary><span class="qa__n">05</span><span class="qa__q">Premium abonelik mi?</span><span class="qa__x" aria-hidden="true"></span></summary><div class="qa__a"><p>Hayır, tek seferlik bir satın alma. Aynı Apple ya da Google hesabıyla açtığın yeni telefonda Ayarlar’daki “Satın alımları geri yükle” yeterli.</p></div></details>
+<details class="qa" data-reveal style="--i:5"><summary><span class="qa__n">06</span><span class="qa__q">Çıkmadan deneyebilir miyim?</span><span class="qa__x" aria-hidden="true"></span></summary><div class="qa__a"><p>Evet. Ayarlar › “Evden çıkmış gibi yap” bildirimi tam geleceği gibi gösterir.</p></div></details>
 </div>
 </div>
 </section>
 
-<section class="get" aria-labelledby="get-title">
+<section class="get" id="get" aria-labelledby="get-title">
+<span class="stop" data-stop aria-hidden="true"><i></i><b>Tamam</b></span>
+<svg class="get__rings" viewBox="-100 -100 200 200" aria-hidden="true" focusable="false"><circle r="90"/><circle r="90"/><circle r="90"/><circle class="get__fence" r="46" pathLength="100"/></svg>
 <div class="wrap">
 <h2 id="get-title">Bir dahaki sefere içi rahat çık.</h2>
 <div class="stores">
@@ -157,14 +230,15 @@
 
 </main>
 <footer class="foot">
-<div class="wrap">
-<span class="mono muted">© 2026 Doornote</span>
-<nav aria-label="Footer">
-<a href="../tr/gizlilik/">Gizlilik politikası</a>
-
-<a href="../" lang="en" data-lang="en">English</a>
-</nav>
+<div class="wrap foot__top">
+<div class="foot__bye"><span class="foot__door" aria-hidden="true"><svg viewBox="160 140 160 165" aria-hidden="true"><g fill="#fbf9f4"><polygon points="277,155 297,155 297,206 277,187"/><polygon points="163,226 163,211 234,145 245,145 311,211 311,226 288,226 288,210.5 239,162.5 186.3,210 186,226"/><rect x="170" y="224" width="16" height="73"/><rect x="288" y="224" width="16" height="73"/><rect x="170" y="281" width="134" height="16"/><polygon points="217.5,225.5 232,240 264.5,210.5 275,221 232,264 205.5,237.5"/></g></svg></span><p class="foot__line">Kapında görüşürüz.</p></div>
+<div class="foot__cols">
+<div><p class="label">Uygulama</p><a href="#how">Nasıl çalışır</a><a href="#plans">Planlar</a><a href="#faq">Sorular</a></div>
+<div><p class="label">Yasal</p><a href="../tr/gizlilik/">Gizlilik politikası</a></div>
+<div><p class="label">Dil</p><a href="../" hreflang="en" lang="en" data-lang="en">English</a><a href="../tr/" hreflang="tr" lang="tr" data-lang="tr" aria-current="true">Türkçe</a></div>
 </div>
+</div>
+<div class="wrap foot__base"><span class="mono">© 2026 Doornote · Konumun telefonunda kalır.</span></div>
 </footer>
 <script src="../assets/site.js" defer></script>
 </body>
